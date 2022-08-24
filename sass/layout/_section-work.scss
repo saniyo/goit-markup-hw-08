@@ -1,0 +1,40 @@
+.work-section {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.work-list {
+  display: flex;
+}
+
+.work-list__item {
+  margin-right: 30px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.work__content {
+  position: relative;
+}
+
+.work__name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  padding: 27px;
+
+  width: 370px;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--primary-white-color);
+
+  font-weight: 700;
+  line-height: 1.14;
+
+  text-transform: uppercase;
+  text-align: center;
+}

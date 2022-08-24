@@ -1,0 +1,110 @@
+.project-list {
+  display: block;
+
+  @media screen and (min-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .project-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+
+
+.project-list__link {
+  display: block;
+   transition-property: box-shadow;
+  transition-duration: var(--timing-duration);
+  transition-timing-function: var(--timing-function);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+
+    & .project__text,
+    & .project__text {
+      transform: translateY(0);
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 354px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+/* Create overlay for card-box */
+
+.project-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.project__image {
+  width: 100%;
+}
+.project__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding: 63px 24px;
+
+  color: var(--primary-white-color);
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  font-size: 18px;
+  line-height: 1.56;
+  transform: translateY(100%);
+
+  transition-property: transform;
+  transition-duration: var(--timing-duration);
+  transition-timing-function: var(--timing-function);
+
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+// /* <<=====>> End create overlay for card-box <<=====>> */
+
+.project-meta {
+  border: 1px Solid #eeeeee;
+  border-top: none;
+  padding: 20px 24px;
+  flex-grow: 1;
+}
+
+// .project-list__item:not(:nth-last-child(-n + 3)) {
+//   margin-bottom: 30px;
+
+//   @media screen and (min-width: 768px) and (max-width: 1199px) {
+//     margin-bottom: 0;
+//   }
+// }
+
+.project-meta__subtitle {
+  margin-bottom: 4px;
+
+  color: var(--title-text-color);
+
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.project-meta__text {
+  color: var(--primary-text-color);
+
+  font-size: 16px;
+  line-height: 1.88;
+}
